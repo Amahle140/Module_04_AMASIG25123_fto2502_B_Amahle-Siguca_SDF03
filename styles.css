@@ -17,7 +17,141 @@ body {
     color: #262626;
     padding-bottom: 3rem;
 }
-
-img {
+    
+   
+   
+    img {
     display: block;
+ }
+.container{
+    max-width: 93.5rem;
+    margin: 0 auto;
+    padding: 0 2rem;
 }
+    .btn{
+        color: inherit;
+        cursor: pointer;
+        font-size: inherit;
+        background: none;
+        display: inline-block;
+    }
+    visually-hidden{
+        position:absolute !important;
+        height: 1px;
+        width: 1px;
+        overflow: hidden;
+        clip:rect(1px,1px,1px,1px)
+    }  
+/* syle profile picture*/
+.profile{
+    padding-top: 64px;
+    padding-bottom: 64px;
+}
+    
+.profile-image {
+    float:left;
+    width: calc(33.33% - 12px);
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    margin-right :3rem;
+    }
+    .profile-image img{
+        border-radius: 50%;
+        border: 10px solid;
+        color: #18956b;
+        padding: 5px; 
+    }
+    .profile-user-settings, .profile-stats, .profile-bio {
+        flex: 2;
+    }
+    .profile-stats {
+       padding-top: 20px;
+       padding-bottom: 10px;
+       margin-left: 100px; 
+    }
+    .profile-user-settings {
+        margin-top: 11px;
+        display: flex;
+        gap: 50px; 
+        align-items: center;
+        padding-bottom: 10px;
+        margin-left: 100px;
+        margin-right: 100px;
+        
+    }
+
+
+.profile-edit-btn {
+    background-color: #odd;
+    color: black;
+}
+
+.profile-setting-btn {
+    background-color: #odd;
+    color: black;
+}
+}
+/*gallery grid*/
+.gallery {
+        display:flex;
+        flex-wrap:wrap;
+        margin:-1rem 1rem;
+        padding-bottom: 3rem;
+    }
+    
+    .gallery-item {
+        margin: 1rem;
+        flex:1 0 22rem;
+        margin: 1rem;
+        color: #333;
+        cursor: pointer;
+    
+    }
+    .gallery-item:hover .gallery-item:info, .gallery-item:focus{
+        background-color: rgba(0,0,0,0.5);
+        color: white;
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 2rem;
+        opacity: 0;
+        transition: opacity 0.3s;
+    
+        .gallery-item-type{
+            position: absolute;
+            top: 8px;
+            right: 8px;
+            padding: 5px;  
+        }
+    }
+    .gallery-item:info {
+        display: none;
+    }
+    .gallery-item-info li{
+        display: inline-block;
+        font-size: 1.6rem;
+        font-weight: 600;
+    }
+    .gallery-item-likes{
+        margin-right: 2.2rem;
+    }
+    .gallery-item-type {
+        position: absolute;
+        top: 64px;
+        right: 64px;
+        font-size: 30px;
+    }
+    .gallery-item-info,.li{
+        color: #fafafa;
+    }
+    @media all and(max-width:450px){
+        .grid{
+            columns: 200px;
+        }
+    }
